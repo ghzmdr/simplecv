@@ -1,0 +1,26 @@
+.section {
+    width: 100%;
+    display: block;
+    position: relative;
+
+    padding: 0;
+    margin-bottom: 2rem;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section__title {
+    position: absolute;
+    background: white;
+    padding: 0 0.2rem;
+    top: -0.6em;
+    left: 1.4rem;
+    z-index: 1;
+    background: white;
+}

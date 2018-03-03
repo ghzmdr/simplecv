@@ -1,0 +1,19 @@
+html, body {
+    font-family: $font-primary;
+}
+
+h1, h2, h3, h4,
+.section-entry__title,
+.section-entry__date {
+    @include text-rendering;
+    font-family: $font-secondary;
+}
+
+.section-entry__subtitle {
+    @include text-rendering;
+    font-family: $font-secondary-alt;
+}
+
+.copy {
+    @include text-rendering;
+}

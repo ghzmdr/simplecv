@@ -1,0 +1,53 @@
+.header {
+    width: 100%;
+    position: relative;
+
+    padding: 1rem 1rem 1rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    border-width: $section-border-width;
+    border-top-width: $section-border-width/2;
+    border-top-right-radius: $section-border-radius;
+    border-top-left-radius: $section-border-radius;
+
+    border-style: solid;
+    border-bottom: none;
+}
+
+.header__name {
+    position: absolute;
+
+    padding: 0 0.2rem;
+
+    top: -0.8em;
+    left: 0.6rem;
+
+    background: white;
+}
+
+.header__portrait {
+    height: 200px;
+    width: 200px;
+}
+
+.header__portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__info {
+    align-self: flex-end;
+}
+
+.header__description {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 700px;
+    margin: 2rem auto 1rem;
+}

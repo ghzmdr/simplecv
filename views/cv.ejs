@@ -1,0 +1,137 @@
+<html style="background: <%= theme.background %>">
+<head>
+    <title><%= owner.name %> | Curriculum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <% var gFontsString = fonts.map(f => f.replace(/\s/g, '+')).join('|') %>
+    <link href="https://fonts.googleapis.com/css?family=<%= gFontsString %>" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/curriculum.css">
+    <style>
+        .header, .section {
+            border-color: <%= theme.borderColor %>;
+        }
+
+        html, body {
+            font-family: <%= theme.fonts.primary %>;
+        }
+
+        h1, h2, h3, h4,
+        .section-entry__title,
+        .section-entry__date {
+            @include text-rendering;
+            font-family: <%= theme.fonts.secondary %>;
+        }
+
+        .section-entry__subtitle {
+            @include text-rendering;
+            font-family: <%= theme.fonts.secondaryAlt %>;
+        }
+
+        .page__footer .button-underline:after {
+            background: <%= theme.accent %>
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="page page--<%= theme.dark ? 'dark' : 'light' %>">
+    <div class="curriculum">
+        <header class="header" style="border-color: <%= theme.borderColor %>">
+            <h1 class="header__name">
+                <%= owner.name %>
+            </h1>
+
+            <div class="header__portrait">
+                <img src="<%= owner.portrait %>" alt="" class="header__portrait-img">
+            </div>
+
+            <ul class="list list-info header__info">
+                <% info.forEach(function(i) { %>
+                <li class="list__item list-info__item">
+                    <div class="info-item">
+                        <span class="info-item__label" style="color: <%= theme.accent %>"><%= i.label %></span>
+                        <span class="info-item__value">
+                            <% if (i.type === 'phone') { %>
+                                    <a class="button" href="tel:<%= i.value %>" target="_blank"><%= i.value %></a>
+                            <% } else if (i.type === 'email') { %>
+                                    <a class="button" href="mailto:<%= i.value %>" target="_blank"><%= i.value %></a>
+                            <% } else if (i.type === 'link') { %>
+                                    <a class="button" href="<%= i.value %>" target="_blank"><%= i.value %></a>
+                            <% } else { %>
+                                    <%= i.value %>
+                            <% } %>
+                        </span>
+                    </div>
+                </li>
+                <% }) %>
+            </ul>
+
+            <% if (owner.description) { %>
+                <p class="copy header__description">
+                    <%- owner.description %>
+                </p>
+            <% } %>
+        </header>
+
+        <% sections.forEach(function(s) { %>
+            <section class="section section--work" style="border-color: <%= s.color %>">
+                <h2 class="section__title"><%= s.title %></h2>
+
+                <% s.entries.forEach(function(e) { %>
+
+                    <div class="section-entry">
+                        <h3 class="section-entry__title"><%= e.title %></h3>
+
+                        <% if (e.subtitle) { %>
+                            <h4 class="section-entry__subtitle"><%= e.subtitle %></h4>
+                        <% } %>
+                        <% if (e.date) { %>
+                            <date class="section-entry__date"><%= e.date %></date>
+                        <% } %>
+
+                        <% if (e.copy) { %>
+                            <p class="copy section-entry__description"><%- e.copy %></p>
+                        <% } %>
+
+                    </div>
+                <% }) %>
+            </section>
+        <% }) %>
+    </div>
+
+    <footer class="page__footer">
+        <button onclick="print()" class="button button-underline footer__print">
+            Print this CV
+        </button>
+        <div>
+            Get in touch:
+            <% if (owner.phone) { %>
+                <a target="_blank" href="tel:<%= owner.phone %>" class="button button-underline">Call</a>
+            <% } %>
+
+            <% if (owner.phone, owner.email) { %>
+                |
+            <% } %>
+
+            <% if (owner.email) { %>
+                <a target="_blank" href="mailto:<%= owner.email %>" class="button button-underline">Mail</a>
+            <% } %>
+
+        </div>
+    </footer>
+</div>
+
+<footer class="footer">
+    <div>
+        Make your own for free at <a href="https://simplecv.io" class="button button-underline">/simplecv.io</a>
+    </div>
+    <div>
+        a tool crafted by <a href="https://ghzmdr.github.com" class="button button-underline">Frantik I/O</a>
+    </div>
+</footer>
+
+</body>
+</html>
+

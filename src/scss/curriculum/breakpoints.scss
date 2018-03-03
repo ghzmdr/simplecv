@@ -1,0 +1,42 @@
+@media screen and (max-width: 768px) {
+    .curriculum {
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .header__name {
+        position: relative;
+        padding: 0 0.2rem;
+        top: -0.2em;
+        left: -0.6rem;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .section-entry__date {
+        position: static;
+    }
+
+    .header__portrait {
+        width: 100%;
+        height: 200px;
+    }
+
+    .footer {
+        text-align: center;
+        display: block;
+    }
+
+    .footer .button {
+        // display: block;
+        width: auto;
+        text-align: center;
+    }
+}

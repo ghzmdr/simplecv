@@ -1,0 +1,28 @@
+.page {
+    display: block;
+    position: relative;
+    padding: 2rem 1rem 1rem;
+}
+
+.page__footer {
+    .button-underline {
+        &:after {
+            background-color: rgba(white, 0.3);
+        }
+    }
+}
+
+.page__footer {
+    display: flex;
+
+    width: 100%;
+    max-width: 660px;
+
+    margin: 0 auto;
+    margin-bottom: 1rem;
+
+    text-align: center;
+    justify-content: space-around;
+
+    color: white;
+}

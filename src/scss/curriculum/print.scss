@@ -1,0 +1,16 @@
+@media print {
+    .curriculum {
+        padding: 0;
+        border-radius: 0;
+        min-width: none;
+        box-shadow: none;
+    }
+
+    .section-entry {
+        page-break-inside: avoid;
+    }
+
+    footer {
+        display: none !important;
+    }
+}
