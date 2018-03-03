@@ -1,0 +1,24 @@
+.button-underline {
+    position: relative;
+    z-index: 0;
+
+    &:after {
+        content: '';
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 2px;
+        height: 0.9em;
+        position: absolute;
+        background: rgba(blue, 0.3);
+        z-index: -1;
+        transform-origin: center bottom;
+        transform: scaleY(0.15) skewX(-14deg) translateX(-0.2rem);
+        transition: transform 0.3s;
+    }
+
+    &:hover:after {
+        transform: scale(1) skewX(4deg);
+    }
+}
+

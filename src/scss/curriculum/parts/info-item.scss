@@ -1,0 +1,35 @@
+.info-item {
+    position: relative;
+    display: inline-flex;
+    padding-bottom: 0.3rem;
+    flex-direction: row-reverse;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: -4px;
+        right: -4px;
+        top: 2px;
+        bottom: 6px;
+        background: rgba(blue, 0.05);
+        z-index: 0;
+    }
+}
+
+.info-item__label,
+.info-item__value {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.info-item__value {
+    text-align: right;
+}
+
+.info-item__label {
+    padding-left: 1rem;
+    font-weight: bold;
+    width: 5em;
+}

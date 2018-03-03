@@ -1,0 +1,22 @@
+@media screen {
+    .page--dark {
+        .curriculum {
+            background: #2b2b2b;
+        }
+
+        h1, h2, h3, h4,
+        .info-item {
+            background: #2b2b2b;
+            color: white;
+        }
+
+        h3 {
+            color: lighten($color-text-secondary, 10%);
+        }
+
+        p {
+            color: white;
+        }
+    }
+}
+

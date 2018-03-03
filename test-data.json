@@ -1,0 +1,72 @@
+{
+    "fonts": ["Quattrocento", "Quattrocento Sans", "Roboto"],
+    "theme": {
+        "background": "linear-gradient(to bottom right, #ffa453, #4d00b7)",
+        "accent": "darkorange",
+        "borderColor": "rgba(255, 165, 0 , 0.2)",
+        "fonts": {
+            "primary": "Roboto",
+            "secondary": "Quattrocento Sans",
+            "secondaryAlt": "Quattrocento"
+        }
+    },
+    "owner": {
+        "name": "Spider Jerusalem",
+        "email": "spider@owns.you",
+        "phone": "+44 666 666",
+        "portrait": "https://i.imgur.com/QsjiSay.jpg",
+        "description": "Infamous but brilliant gonzo journalist. A cynical, foul-mouthed, chain smoking anti-hero."
+    },
+    "info": [{
+        "type": "phone",
+        "label": "Phone",
+        "value": "+44 666 666"
+    }, {
+        "type": "email",
+        "label": "Email",
+        "value": "spider@owns.you"
+    }, {
+        "type": "link",
+        "label": "Website",
+        "value": "https://www.vertigocomics.com/"
+    }, {
+        "label": "Address",
+        "value": "The City, USA"
+    }],
+    "sections": [{
+        "title": "Workplaces smashed",
+        "color": "rgba(0, 0, 255, 0.2)",
+        "entries": [{
+            "title": "The Word",
+            "subtitle": "Gonzo Writer",
+            "date": "Winter 2197 - Present",
+            "copy": "Looking for <i>The Truth</i> real hard."
+        }, {
+            "title": "Vertigo Comics",
+            "subtitle": "Character",
+            "date": "Winter 1997 - Present",
+            "copy": "Spitting tar on the fourth wall"
+        }]
+    }, {
+        "title": "Mofos kicked",
+        "color": "rgba(0, 255, 0, 0.2)",
+        "entries": [{
+            "title": "Fred Christ",
+            "subtitle": "Preachy transient scammer",
+            "copy": "He was going to convert all these idiots."
+        }]
+    }, {
+        "title": "Skills",
+        "color": "rgba(255, 0, 0, 0.2)",
+        "entries": [{
+            "title": "Geetting involved",
+            "subtitle": "Pretending I don't care"
+        }, {
+            "title": "Helping out hookers",
+            "subtitle": "I fall in love quite easily"
+        }, {
+            "title": "Chainsmoking",
+            "subtitle": "I swallow anti-cancer pills so shutup"
+        }]
+    }]
+}

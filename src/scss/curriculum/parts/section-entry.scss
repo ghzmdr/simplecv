@@ -1,0 +1,46 @@
+.section-entry {
+    display: block;
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.2rem 0.5rem;
+
+
+    border-width: $section-border-width;
+
+    border-width: $section-border-width;
+    border-style: solid;
+    border-bottom: none;
+    border-top-width: 0;
+
+    &:first-of-type {
+        padding-top: 1.4rem;
+        border-top-width: $section-border-width/2;
+        border-top-right-radius: $section-border-radius;
+        border-top-left-radius: $section-border-radius;
+    }
+}
+
+.section-entry__date {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.4rem;
+    font-style: italic;
+    font-size: 0.8rem;
+    color: $color-text-secondary;
+}
+
+.section-entry__title {
+    letter-spacing: 0.01em;
+    z-index: 0;
+}
+
+.section-entry__subtitle {
+    color: $color-text-secondary;
+}
+
+.section-entry {
+    border-color: inherit;
+}
