@@ -5,34 +5,7 @@
 
     <% var gFontsString = fonts.map(f => f.replace(/\s/g, '+')).join('|') %>
     <link href="https://fonts.googleapis.com/css?family=<%= gFontsString %>" rel="stylesheet">
-
     <link rel="stylesheet" href="/static/css/curriculum.css">
-    <style>
-        .header, .section {
-            border-color: <%= theme.borderColor %>;
-        }
-
-        html, body {
-            font-family: <%= theme.fonts.primary %>;
-        }
-
-        h1, h2, h3, h4,
-        .section-entry__title,
-        .section-entry__date {
-            @include text-rendering;
-            font-family: <%= theme.fonts.secondary %>;
-        }
-
-        .section-entry__subtitle {
-            @include text-rendering;
-            font-family: <%= theme.fonts.secondaryAlt %>;
-        }
-
-        .page__footer .button-underline:after {
-            background: <%= theme.accent %>
-        }
-    </style>
-
 </head>
 <body>
 
@@ -60,7 +33,7 @@
                             <% } else if (i.type === 'link') { %>
                                     <a class="button" href="<%= i.value %>" target="_blank"><%= i.value %></a>
                             <% } else { %>
-                                    <%- i.value %>
+                                    <%= i.value %>
                             <% } %>
                         </span>
                     </div>
@@ -82,7 +55,15 @@
                 <% s.entries.forEach(function(e) { %>
 
                     <div class="section-entry">
-                        <h3 class="section-entry__title"><%= e.title %></h3>
+                        <h3 class="section-entry__title">
+
+                            <%= e.title %>
+
+                            <% if (e.link) { %>
+                                <a href="<%= e.link %>" target="_blank" class="button button-underline section-entry__link">(<%= e.link %>)</a>
+                            <% } %>
+
+                        </h3>
 
                         <% if (e.subtitle) { %>
                             <h4 class="section-entry__subtitle"><%= e.subtitle %></h4>
@@ -90,6 +71,7 @@
                         <% if (e.date) { %>
                             <date class="section-entry__date"><%= e.date %></date>
                         <% } %>
+
 
                         <% if (e.copy) { %>
                             <p class="copy section-entry__description"><%- e.copy %></p>

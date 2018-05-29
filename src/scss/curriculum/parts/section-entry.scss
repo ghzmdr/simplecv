@@ -37,8 +37,16 @@
     z-index: 0;
 }
 
+.section-entry__link {
+    font-weight: normal;
+}
+
 .section-entry__subtitle {
     color: $color-text-secondary;
+}
+
+.section-entry__description:empty {
+    display: none;
 }
 
 .section-entry {

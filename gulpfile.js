@@ -19,7 +19,7 @@ gulp.task('sass', function () {
 
 gulp.task('develop', ['sass'], async function () {
 
-    await startServer('./test-data.json');
+    await startServer('./mydata_hotels.json');
 
     browserSync.init({
         proxy: 'localhost:3030/',

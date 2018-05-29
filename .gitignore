@@ -58,3 +58,5 @@ typings/
 .env
 
 mydata.json
+mydata*
+static/img
